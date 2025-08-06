@@ -1,26 +1,39 @@
 {
-  "name": "daily-devotionals-api",
-  "version": "1.0.0",
-  "description": "\"An API for daily devotional content\"",
-  "main": "dist/index.js",
+  "type": "module",
+  "name": "devotionals_api",
+  "version": "0.1.1",
+  "description": "Devotionals api to manage daily devotionals crud",
+  "main": "server.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "ts-node-dev --respawn --transpile-only src/index.ts",
-    "build": "tsc",
-    "start": "node dist/index.js"
+    "test": "npm run test",
+    "start": "node server.js",
+    "dev": "node --loader ts-node/esm server.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bikilaketema/devotionals_api.git"
   },
   "keywords": [
-    "express",
-    "typescript",
-    "api",
-    "devotions"
+    "api"
   ],
-  "author": "Zinash Getiso",
+  "author": "Bikila Ketema",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bikilaketema/devotionals_api/issues"
+  },
+  "homepage": "https://github.com/bikilaketema/devotionals_api#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "better-sqlite3": "^11.10.0",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2"
+  },
   "devDependencies": {
+    "@types/better-sqlite3": "^7.6.13",
     "@types/express": "^5.0.3",
-    "@types/node": "^24.2.0",
-    "ts-node-dev": "^2.0.0",
+    "@types/node": "^24.1.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.9.2"
   }
 }
